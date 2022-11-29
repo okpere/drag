@@ -32,17 +32,44 @@ header button {
 aside{
     grid-area: aside;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+}
+aside p{
+    margin-left: 50;
 }
 aside button {
-    padding: 20px 50px;
+    padding: 15px 50px;
+    font-size: 18px;
     color: white;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: rgb(102,98,180);
+    margin: 5px;
+}
+aside .change-mode{
+    background-color: rgb(33,34,45);
+    display: flex;
+    width: 200px;
+    padding: 20px 30px;
+    gap: 10px;
+    justify-content: center;
+}
+.toggle-container{
+    background-color: rgb(102,98,180);
+    border-radius: 15px;
+    width: 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+.toggle{
+    background-color: white;
+    height: 15px;
+    width:20px;
+    border-radius: 50%;
 }
 main{
-    background-color: bisque;
+    background-color: rgb(33,34,45);
     grid-area: main;
 } 
