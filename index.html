@@ -28,7 +28,7 @@
                 </div>
                 <i class="fa-solid fa-moon"></i>
             </div>
-            <i class="fa-solid fa-eye-slash"></i>
+            <i class="sleep fa-solid fa-eye-slash"></i>
             <p>Hide Sidebar</p>
         </div>
     </aside>
@@ -41,3 +41,21 @@
     </main>
 </body>
 </html>
+<script>
+    let toggleContainer = document.querySelector(".toggle-container");
+    let hide = document.querySelector('.sleep')
+    let aside = document.querySelector('aside')
+    // let toggle = toggleContainer.style.justifyContent;
+
+    function hideToogle(){
+        hide.classList.toggle('active')
+        document.body.classList.toggle('active')
+        aside.classList.toggle('active')
+    }
+    hide.addEventListener('click', hideToogle)
+    function changeToggle () {
+        toggleContainer.classList.toggle('active')
+    }
+    toggleContainer.addEventListener("click", changeToggle);
+
+</script>
