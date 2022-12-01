@@ -1,8 +1,8 @@
 *{
-    background-color: rgb(44,44,55);
-    color: white;
+    
 }
 body{
+    color: white;
     display: grid;
     height: 100vh;
     grid-template-areas: 
@@ -26,6 +26,7 @@ header{
      display: flex;
      justify-content: space-between;
      align-items: center;
+     background-color: rgb(44,44,55);
 }
 header button {
     border: none;
@@ -36,6 +37,7 @@ header button {
     background-color: rgb(102,98,180);
 }
 aside{
+    background-color: rgb(44,44,55);
     grid-area: aside;
     display: flex;
     justify-content: space-between;
@@ -56,6 +58,7 @@ aside button {
     border-bottom-right-radius: 20px;
     border: none;
     margin: 5px;
+    background-color: rgb(44,44,55);
 }
 aside button span{
     color:rgb(102,98,180) ;
@@ -92,3 +95,41 @@ main{
     background-color: rgb(33,34,45);
     grid-area: main;
 } 
+.model{
+    background-color: rgb(44,44,55);
+    padding: 20px;
+    border-radius: 20px;
+    width:500px ;
+    margin: auto;
+}
+.model input{
+    border: 1px solid rgb(59, 59, 59);
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    background-color: rgb(44,44,55);
+}
+.model textarea {
+    border: 1px solid rgb(59, 59, 59);
+    width: 100%;
+    background-color: rgb(44,44,55);
+}
+.model button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.model select{
+    color: gray;
+    border: 1px solid rgb(59, 59, 59);
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(44,44,55);
+}
+.st{
+    background-color: white;
+}
+.sn{
+    background-color: rgb(102,98,180) ;
+}

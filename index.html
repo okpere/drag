@@ -34,28 +34,29 @@
     </aside>
     <header>
         <h1>Platform Launch</h1>
-        <button>+ Add New Task</button>
+        <button class="add-task">+ Add New Task</button>
     </header>
     <main>
         <h1>rwrrwrwrwrrwrwrwrwr</h1>
+            <div class="model">
+                <h2>Add New Task</h2>
+                <p>Title</p>
+                <input type="text" placeholder="eg. Take coffee brake">
+                <p>Description</p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <p>Subtasks</p>
+                <input type="text" placeholder="e.g Make coffee">
+                <input type="text" placeholder="e.g Drink coffe & smile">
+                <button class="st"> + add New Subtask </button>
+                <p>Status</p>
+                <select name="" id="">
+                    <option value="">wwww</option>
+                    <option value="">wwww</option>
+                    <option value="">wwww</option>
+                </select>
+                <button class="sn">Create Task</button>
+            </div>
     </main>
 </body>
 </html>
-<script>
-    let toggleContainer = document.querySelector(".toggle-container");
-    let hide = document.querySelector('.sleep')
-    let aside = document.querySelector('aside')
-    // let toggle = toggleContainer.style.justifyContent;
-
-    function hideToogle(){
-        hide.classList.toggle('active')
-        document.body.classList.toggle('active')
-        aside.classList.toggle('active')
-    }
-    hide.addEventListener('click', hideToogle)
-    function changeToggle () {
-        toggleContainer.classList.toggle('active')
-    }
-    toggleContainer.addEventListener("click", changeToggle);
-
-</script>
+<script src="script.js"></script>
