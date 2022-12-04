@@ -95,12 +95,29 @@ main{
     background-color: rgb(33,34,45);
     grid-area: main;
 } 
+.task{
+    display: flex;
+    z-index: 1;
+}
+.task ol{
+    width: 25%;
+    list-style-type: none;
+}
+.task li {
+    padding: 10px 50px;
+    background-color: rgb(44,44,55);
+    margin-bottom: 15px;
+    border-radius: 20px;
+}
 .model{
     background-color: rgb(44,44,55);
     padding: 20px;
     border-radius: 20px;
     width:500px ;
-    margin: auto;
+    position: fixed;
+    top: 300;
+    left: 1000;
+    z-index: 2;
 }
 .model input{
     border: 1px solid rgb(59, 59, 59);
