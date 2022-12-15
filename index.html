@@ -58,24 +58,51 @@
             </ol>
         </div>
             <div class="model">
-                <h2>Add New Task</h2>
+                <form action="">
+                    <h2>Add New Task</h2>
                 <p>Title</p>
-                <input type="text" placeholder="eg. Take coffee brake">
+                <input class="title-form" type="text" placeholder="eg. Take coffee brake">
                 <p>Description</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea class="description-form" name="" id="" cols="30" rows="10"></textarea>
                 <p>Subtasks</p>
-                <input type="text" placeholder="e.g Make coffee">
+                <input class="subtasks-form" type="text" placeholder="e.g Make coffee">
                 <input type="text" placeholder="e.g Drink coffe & smile">
                 <button class="st"> + add New Subtask </button>
                 <p>Status</p>
-                <select name="" id="">
-                    <option value="">wwww</option>
-                    <option value="">wwww</option>
-                    <option value="">wwww</option>
+                <select name="" id="naan">
+                    <option value="Todo">Todo</option>
+                    <option value="Doing">Doing</option>
+                    <option value="Done">Done</option>
                 </select>
                 <button class="sn">Create Task</button>
+                </form>
             </div>
     </main>
 </body>
 </html>
+<script>
+    let create = document.querySelector('.sn')
+    let title = document.querySelector('.title-form')
+    let description = document.querySelector('.description-form')
+    let subtasks = document.querySelector('.subtasks-form')
+    var opt = document.getElementById("naan");
+    let work = []
+
+    opt.onchange = function() {
+  var strUser = opt.options[opt.selectedIndex].value;
+  console.log(strUser);
+}
+
+ create.addEventListener('click' , createClick)
+ function createClick(e){
+    event.preventDefault()
+    let newtask = {
+    newTitle : title.value,
+    newDescription : description.value,
+    
+    };
+    work.push(newtask)
+    localStorage.setItem('works', JSON.stringify(work));
+ }
+</script>
 <script src="script.js"></script>
