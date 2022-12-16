@@ -31,3 +31,22 @@ let toggleContainer = document.querySelector(".toggle-container");
         // }
     }
     toggleContainer.addEventListener("click", changeToggle);
+    let create = document.querySelector('.sn')
+    let title = document.querySelector('.title-form')
+    let description = document.querySelector('.description-form')
+    let subtasks = document.querySelector('.subtasks-form')
+    var opt = document.getElementById("naan");
+    let work = []
+
+
+ create.addEventListener('click' , createClick)
+ function createClick(e){
+    event.preventDefault()
+    let newtask = {
+    newTitle : title.value,
+    newDescription : description.value,
+    stat: opt.value
+    }
+    work.push(newtask)
+    localStorage.setItem('works', JSON.stringify(work));
+ }

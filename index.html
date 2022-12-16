@@ -38,12 +38,14 @@
     </header>
     <main>
         <div class="task">
-            <ol>
-            <p>Todo <span>(4)</span></p>
-                <li><h3>Build ui for onboarding flow</h3>
-                    <p><span>0</span>of<span>3</span>substasks</p>
-                </li>
-            </ol>
+            <div class="todo">
+                <p>Todo <span>(4)</span></p>
+                <ol>
+                    <li><h3>Build ui for onboarding flow</h3>
+                        <p><span>0</span>of<span>3</span>substasks</p>
+                    </li>
+                </ol>
+            </div>
             <ol>
             <p>Doing <span>(6)</span></p>
                 <li><h3>Build ui for onboarding flow</h3>
@@ -81,28 +83,7 @@
 </body>
 </html>
 <script>
-    let create = document.querySelector('.sn')
-    let title = document.querySelector('.title-form')
-    let description = document.querySelector('.description-form')
-    let subtasks = document.querySelector('.subtasks-form')
-    var opt = document.getElementById("naan");
-    let work = []
-
-    opt.onchange = function() {
-  var strUser = opt.options[opt.selectedIndex].value;
-  console.log(strUser);
-}
-
- create.addEventListener('click' , createClick)
- function createClick(e){
-    event.preventDefault()
-    let newtask = {
-    newTitle : title.value,
-    newDescription : description.value,
-    
-    };
-    work.push(newtask)
-    localStorage.setItem('works', JSON.stringify(work));
- }
+ const todo = document.querySelector('.todo')
+ 
 </script>
 <script src="script.js"></script>
