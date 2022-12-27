@@ -39,9 +39,15 @@ let toggleContainer = document.querySelector(".toggle-container");
     let work = []
 
 
+    const doing = document.querySelector('.doing')
+    const don = document.querySelector('.don')
+    const todo = document.querySelector('.todo')
+
+
+
  create.addEventListener('click' , createClick)
  function createClick(e){
-    event.preventDefault()
+    e.preventDefault()
     let newtask = {
     newTitle : title.value,
     newDescription : description.value,
@@ -49,4 +55,24 @@ let toggleContainer = document.querySelector(".toggle-container");
     }
     work.push(newtask)
     localStorage.setItem('works', JSON.stringify(work));
- }
+}
+create.addEventListener('click' , disp)
+function disp(){
+    JSON.parse(localStorage.getItem('works')).map(data => {
+        console.log(data.newTitle,data.stat)
+            if(data.stat === 'Todo'){
+                todo.innerHTML += `
+            <li>${data.newTitle}<li>`}
+            else if(data.stat === 'Doing'){
+                doing.innerHTML += `<li>${data.newTitle}<li>`   
+            }else if(data.stat === "Done"){
+                don.innerHTML += `<li>${data.newTitle}<li>`
+            }else{
+    
+            
+        }
+           
+    })
+} 
+
+    
