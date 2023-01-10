@@ -1,90 +1,112 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dragdrop</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://kit.fontawesome.com/4f17b5c1a5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-</head>
-<body>
-    <aside>
-        <div>
-        <img src="./images/faviconio-logo/logo.svg" alt="">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/4f17b5c1a5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="v">
+        <img src="./images/faviconio-logo/logo.svg" alt="" />
         <p>ALL BOARD <span>(8)</span></p>
         <button><i class="fa-solid fa-book-medical"></i>Platform Launch</button>
         <button><i class="fa-solid fa-book-medical"></i>Marteting Plan</button>
-        <button><i class="fa-solid fa-book-medical"></i>  Roadmap</button>
-        <button><i class="fa-solid fa-book-medical"></i>  <span>+Create New</span></button>
+        <button><i class="fa-solid fa-book-medical"></i> Roadmap</button>
+        <button>
+          <i class="fa-solid fa-book-medical"></i> <span>+Create New</span>
+        </button>
+      </div>
+      <div>
+        <div class="change-mode">
+          <i class="fa-solid fa-lightbulb"></i>
+          <div class="toggle-container">
+            <div class="toggle"></div>
+          </div>
+          <i class="fa-solid fa-moon"></i>
         </div>
-        <div>
-            <div class="change-mode">
-                <i class="fa-solid fa-lightbulb"></i>
-                <div class="toggle-container">
-                    <div class="toggle"></div>
-                </div>
-                <i class="fa-solid fa-moon"></i>
-            </div>
-            <i class="sleep fa-solid fa-eye-slash"></i>
-            <p>Hide Sidebar</p>
-        </div>
-    </aside>
+        <i class="sleep fa-solid fa-eye-slash"></i>
+        <p>Hide Sidebar</p>
+      </div>
+    </nav>
     <header>
-        <h1>Platform Launch</h1>
-        <button class="add-task">+ Add New Task</button>
+      <div class="place">
+      <h1>Platform Launch</h1>
+      <i class="fa-solid fa-chevron-up we"></i>
+      </div>
+      <a class="add-task">+ Add New Task</a>
     </header>
     <main>
-        <div class="task">
-            <div>
-                <p>Todo <span>(4)</span></p>
-                <ol class="todo" >
-                    <li><h3>Build ui for onboarding flow</h3>
-                        <p><span>0</span>of<span>3</span>substasks</p>
-                </ol>
-            </div>
-            <div>
-                <p>Todo <span>(4)</span></p>
-                <ol class="doing" >
-                    <li><h3>Build ui for onboarding flow</h3>
-                        <p><span>0</span>of<span>3</span>substasks</p>
-                </ol>
-                ggggggggggggg
-            </div>
-            <div>
-                <p>Todo <span>(4)</span></p>
-                <ol class="don" >
-                    <li><h3>Build ui for onboarding flow</h3>
-                        <p><span>0</span>of<span>3</span>substasks</p>
-                </ol>
-            </div>
+      <div class="task">
+        <div class="todo">
+          <p>Todo <span>(4)</span></p>
+          <ol class="task_div">
+            <li><b>build ui for onboarding flow</b></li>
+            <li><span>0</span>of<span>3</span>substasks</li>
+          </ol>
         </div>
-            <div class="model">
-                <form action="">
-                    <h2>Add New Task</h2>
-                <p>Title</p>
-                <input class="title-form" type="text" placeholder="eg. Take coffee brake">
-                <p>Description</p>
-                <textarea class="description-form" name="" id="" cols="30" rows="10"></textarea>
-                <p>Subtasks</p>
-                <input class="subtasks-form" type="text" placeholder="e.g Make coffee">
-                <input type="text" placeholder="e.g Drink coffe & smile">
-                <button class="st"> + add New Subtask </button>
-                <p>Status</p>
-                <select name="" id="naan">
-                    <option value="Todo">Todo</option>
-                    <option value="Doing">Doing</option>
-                    <option value="Done">Done</option>
-                </select>
-                <button class="sn">Create Task</button>
-                </form>
-            </div>
+        <div class="doing">
+          <p>doing<span>(4)</span></p>
+          <ol>
+            <li><b>build ui for onboarding flow</b></li>
+            <li><span>0</span>of<span>3</span>substasks</li>
+          </ol>
+        </div>
+        <div class="don">
+          <p>done <span>(4)</span></p>
+          <ol>
+            <li><b>build ui for onboarding flow</b></li>
+            <li><span>0</span>of<span>3</span>substasks</li>
+          </ol>
+        </div>
+      </div>
+      <div class="model">
+        <form action="">
+          <h2>Add New Task</h2>
+          <p>Title</p>
+          <input
+            class="title-form"
+            type="text"
+            placeholder="eg. Take coffee brake"
+          />
+          <p>Description</p>
+          <textarea
+            class="description-form"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <p>Subtasks</p>
+          <input
+            class="subtasks-form"
+            type="text"
+            placeholder="e.g Make coffee"
+          />
+          <input type="text" placeholder="e.g Drink coffe & smile" />
+          <button class="st">+ add New Subtask</button>
+          <p>Status</p>
+          <select name="" id="naan">
+            <option value="Todo">Todo</option>
+            <option value="Doing">Doing</option>
+            <option value="Done">Done</option>
+          </select>
+          <button class="sn">Create Task</button>
+        </form>
+      </div>
     </main>
-</body>
+  </body>
 </html>
-<script>
-    
-</script>
+<script></script>
 <script src="script.js"></script>
