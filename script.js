@@ -3,6 +3,8 @@ let hide = document.querySelector(".sleep");
 let nav = document.querySelector("nav");
 let add = document.querySelector(".add-task");
 let modal = document.querySelector(".model");
+let mainbody =document.querySelector('body')
+let openHide = document.querySelector('.we')
 // let toggle = toggleContainer.style.justifyContent;
 
 let create = document.querySelector(".sn");
@@ -18,6 +20,7 @@ const todo = document.querySelector(".todo");
 let work = [];
 
 // events listeners
+openHide.addEventListener("click" , openHideToggle)
 add.addEventListener("click", addtoggle);
 hide.addEventListener("click", hideToogle);
 toggleContainer.addEventListener("click", changeToggle);
@@ -32,15 +35,27 @@ function addtoggle() {
   }
 }
 
+function openHideToggle (){
+  mainbody.style.gridTemplateAreas = '"nav header header" "nav main main"'
+  nav.style.display = "flex"
+  nav.style.justifyContent = "space-between";
+  // flex-direction: column;
+  openHide.style.display = "none"
+}
 function hideToogle() {
-  // hide.classList.toggle("active");
+  // hiding = hide.classList.toggle("active");
   // document.body.classList.toggle("active");
   // nav.classList.toggle("active");
-  if(hide.style.display === "block"){
-    console.log('hi')
-
+  // if(nav.style.active.display === 'none'){
+  //   console.log('start')
+  // }else{
+  // }
+  if(mainbody.style.gridTemplateAreas === '"nav header header" "nav main main"'){
+    mainbody.style.gridTemplateAreas = '"header header header" "main main main"';
+    nav.style.display = "none"
+    openHide.style.display = "block"
   }else{
-    document.body.gridTemplateArea = "header header header","main main main"
+    mainbody.style.gridTemplateAreas = '"nav header header" "nav main main"'
   }
 }
 
@@ -68,6 +83,7 @@ function createClick(e) {
   work.push(newtask);
   console.log(work);
   localStorage.setItem("works", JSON.stringify(work));
+  
 
   addWork(newtask);
 }
